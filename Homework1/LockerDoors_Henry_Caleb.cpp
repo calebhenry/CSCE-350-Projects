@@ -2,8 +2,7 @@
  * @file LockerDoors_Henry_Caleb.cpp
  * @author Caleb Henry
  * @brief This program passes over a collection of n lockers r times. For each pass i every ith locker is opened if it 
- * is closed or closed if it is opened. All lockers start off closed. n and r are passed in through command line 
- * arguments, n is the first argument and m is the second.
+ * is closed or closed if it is opened. All lockers start off closed. n and r are passed in through the terminal
  * @version 1.0
  * @date 2023-09-01
  * 
@@ -17,8 +16,12 @@ void openDoors(int n, int r);
 int toggle(int num);
 
 int main(int argc, char *argv[]) {
-  int n = atof(argv[1]);
-  int r = atof(argv[2]);
+  std::cout << "Enter the total number of lockers: ";
+  int n;
+  std::cin >> n;
+  std::cout << "Enter the total number of passes: ";
+  int r;
+  std::cin >> r;
   openDoors(n, r);
 }
 
