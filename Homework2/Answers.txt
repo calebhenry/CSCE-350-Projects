@@ -1,0 +1,18 @@
+1. First, I created two classes, a node class and a BST class. The nodes hold the data and the children, and the BST holds the root.
+The insert function on the BST is simple. It functions recursively by comparing its data to the current node. If the data is greater 
+and the node has no right child, it is added. If it is greater and has a right child, the same function is called on the child. The 
+same things occurs for the left side if the data is smaller. If the data is equal, the function prints that duplicates are not allowed.
+For the delete function, I decided to use a while loop to go down the tree and find the node that needs to be deleted as well as its
+parent. Then, there are three cases. First, if it has no children, it is simply removed from its parent. If it has one child, its
+child is now turned into its parents child. Finally, if it has two children, the program finds the smallest node on its right side
+and switches the node that needs to be deleted with the node it finds. Then, it removed the node. For the search, it simply uses a 
+while loop to iterate down the tree, checking at each stop if the data is equal two and printing out that node. If it finds one it is
+equal to, it prints that, otherwise it says not found. Smallest simply goes are far left in the tree as possible and returns that node, 
+and largest goes as far right and returns the node. Print is recursive, recursively printing the nodes left side, then itself, then its
+right side. The main function just uses simple string parsing to find which command is being run.
+
+2. The main challenge was the delete method. Before I though of keeping track of its parent, I couldn't figure out how to delete a node 
+once I found it. Later on, I realized I could just keep a pointer to its parent and use that to delete it. I also had issues with insert,
+but it turns out I was because I forgot to actually use the new keyword to make nodes.
+
+3. Just format commands as instructed. For example, to insert node 6, type "Insert node 6".
